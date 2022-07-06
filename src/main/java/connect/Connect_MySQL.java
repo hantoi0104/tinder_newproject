@@ -10,7 +10,7 @@ public static Connection getConnect(){
         Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/msh_tinder?useSSL=false";
         String username = "root";
-        String pass = "tranduong1@zxc";
+        String pass = "quan1998";
         return DriverManager.getConnection(url, username, pass);
     } catch (ClassNotFoundException | SQLException e) {
         e.printStackTrace();

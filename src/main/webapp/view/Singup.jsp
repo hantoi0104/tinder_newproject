@@ -12,10 +12,10 @@
     <form class="box" action="/view/login.jsp" method="post">
         <img src="/img/logo.png">
         <!--                <h2> Signup  </h2>-->
-        <input type="text" name="" placeholder="Username">
-        <input type="text" name="" placeholder="Email">
-        <input type="password" name="'" placeholder="Password">
-        <input type="password" name="'" placeholder="Confirm Password">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="confirm password" placeholder="Confirm Password">
         <!-- <input type="submit" name="" value="Login"> -->
 
         <button class="button" type="submit"><a href="view/login.jsp">Signup</a></button>
