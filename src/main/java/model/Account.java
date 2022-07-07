@@ -1,37 +1,39 @@
 package model;
 
-public class Account {
-    private String useName;
-    private String passWord;
-    private String mail;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 
-    public Account(String useName, String passWord, String mail) {
+public class Account {
+    private MysqlxDatatypes.Scalar.String useName;
+    private MysqlxDatatypes.Scalar.String passWord;
+    private MysqlxDatatypes.Scalar.String mail;
+
+    public Account(MysqlxDatatypes.Scalar.String useName, MysqlxDatatypes.Scalar.String passWord, MysqlxDatatypes.Scalar.String mail) {
         this.useName = useName;
         this.passWord = passWord;
         this.mail = mail;
     }
 
-    public String getUseName() {
+    public MysqlxDatatypes.Scalar.String getUseName() {
         return useName;
     }
 
-    public void setUseName(String useName) {
+    public void setUseName(MysqlxDatatypes.Scalar.String useName) {
         this.useName = useName;
     }
 
-    public String getPassWord() {
+    public MysqlxDatatypes.Scalar.String getPassWord() {
         return passWord;
     }
 
-    public void setPassWord(String passWord) {
+    public void setPassWord(MysqlxDatatypes.Scalar.String passWord) {
         this.passWord = passWord;
     }
 
-    public String getMail() {
+    public MysqlxDatatypes.Scalar.String getMail() {
         return mail;
     }
 
-    public void setMail(String mail) {
+    public void setMail(MysqlxDatatypes.Scalar.String mail) {
         this.mail = mail;
     }
 }
