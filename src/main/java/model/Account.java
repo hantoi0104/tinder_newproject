@@ -13,7 +13,7 @@ public class Account {
         this.mail = mail;
     }
 
-    public MysqlxDatatypes.Scalar.String getUseName() {
+    public String getUseName() {
         return useName;
     }
 

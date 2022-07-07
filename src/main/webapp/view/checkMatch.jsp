@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap"
-            rel="stylesheet"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Admin
+  Date: 7/7/2022
+  Time: 2:25 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<link rel="stylesheet" href="/css/checkMatch.css">
 
-    <title>Document</title>
+<html>
+<head>
+    <title>Title</title>
 </head>
 <body>
-<h1></h1>
 <div class="container">
     <div class="side">
         <div class="header">
@@ -28,8 +23,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li>Matches</li>
-                <li class="active">Mensagens</li>
+                <li class="active">Matches</li>
+                <li >Mensagens</li>
             </ul>
         </div>
         <div class="messages">
@@ -38,75 +33,16 @@
             </div>
             <a class="message" id="chatuser1" href="#chatbox">
                 <div class="user">Caroline</div>
-                <div class="heart">
+                <div class="heart1">
                     <i class="fas fa-heart"></i>
                 </div>
 
-                <div class="no">
+                <div class="no1">
                     <i class="fas fa-times"></i>
                 </div>
-            </a>            </a>
+            </a>
         </div>
-        <div class="messages">
-            <div class="avatar">
-                <img src="https://randomuser.me/api/portraits/women/39.jpg" alt=""/>
-            </div>
-            <a class="message" id="chatuser2" href="#chatbox">
-                <div class="user">Caroline</div>
-                <div class="heart">
-                    <i class="fas fa-heart"></i>
-                </div>
 
-                <div class="no">
-                    <i class="fas fa-times"></i>
-                </div>
-            </a>            </a>
-        </div>
-        <div class="messages">
-            <div class="avatar">
-                <img src="https://randomuser.me/api/portraits/women/40.jpg" alt=""/>
-            </div>
-            <a class="message" id="chatuser3" href="#chatbox">
-                <div class="user">Caroline</div>
-                <div class="heart">
-                    <i class="fas fa-heart"></i>
-                </div>
-
-                <div class="no">
-                    <i class="fas fa-times"></i>
-                </div>
-            </a>            </a>
-        </div>
-        <div class="messages">
-            <div class="avatar">
-                <img src="https://randomuser.me/api/portraits/women/41.jpg" alt=""/>
-            </div>
-            <a class="message" id="chatuser4" href="#chatbox">
-                <div class="user">Caroline</div>
-                <div class="heart">
-                    <i class="fas fa-heart"></i>
-                </div>
-
-                <div class="no">
-                    <i class="fas fa-times"></i>
-                </div>
-            </a>            </a>
-        </div>
-        <div class="messages">
-            <div class="avatar">
-                <img src="https://randomuser.me/api/portraits/women/42.jpg" alt=""/>
-            </div>
-            <a class="message" id="chatuser5" href="#chatbox">
-                <div class="user">Caroline</div>
-                <div class="heart">
-                    <i class="fas fa-heart"></i>
-                </div>
-
-                <div class="no">
-                    <i class="fas fa-times"></i>
-                </div>
-            </a>            </a>
-        </div>
     </div>
     <div class="content">
         <div class="card">
@@ -171,22 +107,4 @@
 
 </div>
 </body>
-
-<!--    <SCRipt>-->
-<!--        document.getElementById('chatuser1').onclick=()=>{-->
-<!--            document.getElementById('chatbox1').style.display="block"-->
-<!--        }-->
-<!--        document.getElementById('chatuser2').onclick=()=>{-->
-<!--            document.getElementById('chatbox2').style.display="block"-->
-<!--        }-->
-<!--        document.getElementById('chatuser3').onclick=()=>{-->
-<!--            document.getElementById('chatbox3').style.display="block"-->
-<!--        }-->
-<!--        document.getElementById('chatuser4').onclick=()=>{-->
-<!--            document.getElementById('chatbox4').style.display="block"-->
-<!--        }-->
-<!--        document.getElementById('chatuser5').onclick=()=>{-->
-<!--            document.getElementById('chatbox5').style.display="block"-->
-<!--        }-->
-<!--    </SCRipt>-->
 </html>
