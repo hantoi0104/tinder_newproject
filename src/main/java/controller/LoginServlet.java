@@ -26,6 +26,7 @@ public class LoginServlet extends HttpServlet {
         if (action == null) {
             action = "";
 
+
         }
         switch (action) {
             case "action":

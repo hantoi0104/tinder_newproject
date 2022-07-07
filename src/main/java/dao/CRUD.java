@@ -1,5 +1,7 @@
 package dao;
 
+import model.Account;
+
 import java.util.List;
 
 public interface CRUD<E> {
@@ -8,4 +10,5 @@ public interface CRUD<E> {
     public boolean edit(String id,E e);
     public boolean delete(String id);
     public E findById(String id);
+
 }
