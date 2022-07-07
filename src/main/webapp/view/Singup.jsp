@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="login">
-    <form class="box" action="/view/login.jsp" method="post">
+    <form class="box" action="/Signup" method="post">
         <img src="/img/logo.png">
         <!--                <h2> Signup  </h2>-->
         <input type="text" name="username" placeholder="Username">
@@ -18,7 +18,7 @@
         <input type="password" name="confirm password" placeholder="Confirm Password">
         <!-- <input type="submit" name="" value="Login"> -->
 
-        <button class="button" type="submit"><a href="view/login.jsp">Signup</a></button>
+        <button class="button" type="submit">Signup</button>
 
         <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor" class="bi bi-facebook"

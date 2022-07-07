@@ -17,6 +17,8 @@ public class AccountDAO implements CRUD<Account> {
     private static final String SELECT_ALL_ACCOUNT = "select * from account";
     private static final String DELETE_ACCOUNT_SQL = "delete from account where useName = ?;";
     private static final String UPDATE_ACCOUNT_SQL = "update account set passWord= ? where useName =?";
+    private static final String CHECK_ACCOUNT_SQL = "select * from account where useName = ?";
+    private static final String SIGNUP_ACCOUNT_SQL = "insert into account value (?,?,?)";
 
     @Override
     public List<Account> getAll() {
@@ -69,7 +71,7 @@ public class AccountDAO implements CRUD<Account> {
     public boolean delete(String useName) {
         try (Connection connection = Connect_MySQL.getConnect();
              PreparedStatement statement = connection.prepareStatement(DELETE_ACCOUNT_SQL);) {
-            statement.setString(1,useName);
+            statement.setString(1, useName);
             statement.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -88,11 +90,29 @@ public class AccountDAO implements CRUD<Account> {
             while (resultSet.next()) {
                 String passWord = resultSet.getString("passWord");
                 String mail = resultSet.getString("mail");
-               return new Account(useName, passWord, mail);
+                return new Account(useName, passWord, mail);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         return null;
     }
+
+
+
+
+//
+//    @Override
+//    public void Signup(String userName, String passWord) {
+//        try (Connection connection = Connect_MySQL.getConnect();
+//             PreparedStatement statement = connection.prepareStatement(SIGNUP_ACCOUNT_SQL);) {
+//            statement.setString(1, userName);
+//            statement.setString(2, passWord);
+//            statement.executeUpdate();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
+
+

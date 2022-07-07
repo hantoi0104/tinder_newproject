@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +11,8 @@
 <body>
 <div class="login" >
     <form class="box"  method="post" action="/login">
+
+
         <img src="/img/logo.png">
 <!--        <h1> Login  </h1>-->
         <input type="text" name="username" placeholder="Username">
