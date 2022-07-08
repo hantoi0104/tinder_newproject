@@ -5,6 +5,7 @@ import model.Login;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
+
 @WebFilter(urlPatterns = "/home")
 public class FilterLogin implements Filter {
     @Override
@@ -14,12 +15,12 @@ public class FilterLogin implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-if (Login.account==null){
-    RequestDispatcher dispatcher = request.getRequestDispatcher("/view/login.jsp");
-    dispatcher.forward(request, response);
-}else {
-chain.doFilter(request, response);
-}
+        if (Login.account == null) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/view/login.jsp");
+            dispatcher.forward(request, response);
+        } else {
+            chain.doFilter(request, response);
+        }
     }
 
     @Override

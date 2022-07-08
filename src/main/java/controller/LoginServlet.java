@@ -40,17 +40,19 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
         int index = checkAccount(req);
-        if (index != -1) {
-            req.setAttribute("account", accounts.get(index));
-            Login.account = accounts.get(index);
-            resp.sendRedirect("/home");
-        } else {
-            resp.sendRedirect("/login");
+
+        if (index != -1 ) {
+                req.setAttribute("account", accounts.get(index));
+                Login.account = accounts.get(index);
+                resp.sendRedirect("/home");
+            } else {
+                resp.sendRedirect("/view/login.jsp");
+            }
+
+
         }
-
-
-    }
 
     public int checkAccount(HttpServletRequest req) {
         String username = req.getParameter("username");
@@ -58,6 +60,7 @@ public class LoginServlet extends HttpServlet {
         for (int i = 0; i < accounts.size(); i++) {
             if (accounts.get(i).getUseName().equals(username)) {
                 if (accounts.get(i).getPassWord().equals(password)) {
+
                     return i;
                 }
             }
@@ -66,4 +69,3 @@ public class LoginServlet extends HttpServlet {
         return -1;
     }
 }
-

@@ -12,11 +12,11 @@ import java.util.Date;
 import java.util.List;
 
 public class ProFileDAO implements CRUD<ProFile> {
-    private static final String INSERT_PROFILE_SQL = "insert into profile value (?,?,?,?,?,?);";
-    private static final String SELECT_PROFILE_BY_ID = "select * from  profile where idProfile =?";
-    private static final String SELECT_ALL_PROFILE = "select * from  profile";
-    private static final String DELETE_PROFILE_SQL = "delete from profile where idProfile = ?;";
-    private static final String UPDATE_PROFILE_SQL = "update profile set name = ?, sex = ?, age =?, address=?, avata = ? where idProfile = ?";
+    private static final String INSERT_PROFILE_SQL = "insert into frofile value (?,?,?,?,?,?);";
+    private static final String SELECT_PROFILE_BY_ID = "select * from  frofile where idProfile =?";
+    private static final String SELECT_ALL_PROFILE = "select * from  frofile";
+    private static final String DELETE_PROFILE_SQL = "delete from frofile where idProfile = ?;";
+    private static final String UPDATE_PROFILE_SQL = "update frofile set name = ?, sex = ?, age =?, address=?, avata = ? where idProfile = ?";
 
     @Override
     public List<ProFile> getAll() {

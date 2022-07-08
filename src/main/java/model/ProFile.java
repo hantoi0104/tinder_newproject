@@ -66,4 +66,16 @@ public class ProFile {
     public void setImgSrc(String imgSrc) {
         this.imgSrc = imgSrc;
     }
+
+    @Override
+    public String toString() {
+        return "ProFile{" +
+                "idProfile='" + idProfile + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                ", imgSrc='" + imgSrc + '\'' +
+                '}';
+    }
 }

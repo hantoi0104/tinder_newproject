@@ -1,3 +1,5 @@
+<%@ page import="dao.ProFileDAO" %>
+<%@ page import="model.ProFile" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +22,11 @@
     <div class="side">
         <div class="header">
             <div class="avatar">
-                <img src="https://randomuser.me/api/portraits/women/64.jpg" alt=""/>
+                <img src="<%
+                ProFile file = ne
+             %>" alt=""/>
             </div>
-            <div class="title">Meu Profile</div>
+            <div class="title"> <a href="/profile?action=create" > Edit Profile </a></div>
         </div>
         <div class="menu">
             <ul>

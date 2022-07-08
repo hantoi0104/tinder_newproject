@@ -17,30 +17,27 @@ public class SignUpServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-                    String name = req.getParameter("username");
-                    String password = req.getParameter("password");
-                    String repassword = req.getParameter("confirm password");
-                    String email = req.getParameter("email");
-                    if (!password.equals(repassword)){
-                        System.out.printf("sai ps");
-                        resp.sendRedirect("/view/Singup.jsp");
+        String name = req.getParameter("username");
+        String password = req.getParameter("password");
+        String repassword = req.getParameter("confirm password");
+        String email = req.getParameter("email");
+        if (!password.equals(repassword)){
+            System.out.printf("sai ps");
+            resp.sendRedirect("/view/Singup.jsp");
 
-                    } else{
-                        Account account = accountDAO.findById(name);
-                        if (account == null){
-                            accountDAO.create(new Account(name,password,email));
-                            resp.sendRedirect("/view/login.jsp");
+        } else{
+            Account account = accountDAO.findById(name);
+            if (account == null){
+                accountDAO.create(new Account(name,password,email));
+                resp.sendRedirect("/view/login.jsp");
 
-                        }else {
-                            System.out.printf("trung");
-                            resp.sendRedirect("/view/Singup.jsp");
-
-                        }
-                    }
-
+            }else {
+                System.out.printf("trung");
+                resp.sendRedirect("/view/Singup.jsp");
 
             }
         }
 
 
-
+    }
+}
